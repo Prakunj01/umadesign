@@ -1,9 +1,9 @@
 import React from "react";
-import BannerBackground from "../Assets/home-banner-background.png";
-import BannerImage from "../Assets/home-banner-image.png";
-import Navbar from "./Navbar";
+import BannerBackground from "../../Assets/home-banner-background.png";
+import BannerImage from "../../Assets/home-banner-image.png";
+import Navbar from "../NavBar/Navbar";
 import { FiArrowRight } from "react-icons/fi";
-
+import "./Home.css";
 const Home = () => {
   return (
     <div className="home-container">

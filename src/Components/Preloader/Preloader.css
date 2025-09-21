@@ -1,0 +1,49 @@
+/* ===== Preloader Full Screen ===== */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #111; /* dark background or white as per branding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Active state (logo visible) */
+.preloader.active .preloader-logo {
+  animation: zoomInOut 2.5s ease forwards;
+}
+
+/* Once loading done → fade out */
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Logo animation */
+.preloader-logo {
+  width: 140px;
+  height: auto;
+  opacity: 0;
+}
+
+/* Zoom animation */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}

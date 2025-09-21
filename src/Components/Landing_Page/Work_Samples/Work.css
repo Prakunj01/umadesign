@@ -1,0 +1,143 @@
+/* Section */
+.offer {
+  position: relative;   /* for background layer */
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow: hidden;     /* background overflow hidden */
+}
+
+/* 🔥 Background Animated Layer */
+.offer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(270deg, #2f2f2f, #1a1a1a, #3b3b3b, #2f2f2f);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  z-index: 0;
+}
+
+/* Gradient Animation Keyframes */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Keep All Other Content On Top */
+.section-header,
+.offerCard {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d4af37, #bfbfbf);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.offerCard h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Cards container */
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Individual Cards */
+.smallCard {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 220px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  font-size: 55px;
+  color: #d4af37;  /* gold */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.smallCard .name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Hover ✨ */
+.smallCard:hover {
+  border: 1px solid #d4af37;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+}
+
+.smallCard:hover .icon {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.smallCard:hover .name {
+  color: #d4af37;
+}
+
+/* Footer quotation */
+.offer_footer {
+  margin-top: 50px;
+}
+
+.offer_footer_text {
+  font-size: 1.1rem;
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .smallCard {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .smallCard {
+    width: 100%;
+  }
+}
